@@ -2,3 +2,8 @@
 crate database latihan_laravel;
 
 use latihan_laravel;
+
+show tables;
+
+select
+* from kategori;
