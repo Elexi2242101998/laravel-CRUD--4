@@ -6,4 +6,4 @@ use latihan_laravel;
 show tables;
 
 select
-* from kategori;
+* from berita;

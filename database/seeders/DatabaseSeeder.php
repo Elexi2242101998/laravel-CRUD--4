@@ -24,5 +24,12 @@ class DatabaseSeeder extends Seeder
          DB::table('kategori')->insert([
             'nama_kategori'=>'Nasional'
          ]);
+
+         DB::table('berita')->insert([
+            'judul_berita'=>'lorem_ipsum',
+            'isi_berita'=>'lorem_ipsum',
+            'gambar_berita'=>'lorem.jpg',
+            'id_kategori'=>1,
+         ]);
     }
 }
