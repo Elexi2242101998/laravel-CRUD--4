@@ -7,8 +7,7 @@
                 <h1 class="h3 mb-2 text-gray-800">List Kategori</h1>
             </div>
             <div class="col-lg-6 text-right">
-                <a href="{{ route('kategori.tambah') }}" class="btn btn-sm btn-primary"><i class="fas fa-plus"></i>  Tambah</a>
-                <a href="{{ route('kategori.exportPdf') }}" class="btn btn-sm btn-primary"><i class="fas fa-file-pdf"></i> Export PDF</a>
+                <a href="{{ route('user.tambah') }}" class="btn btn-sm btn-primary"><i class="fas fa-plus"></i>  Tambah</a>
             </div>
         </div>
 
@@ -25,7 +24,8 @@
                         <thead>
                             <tr>
                                 <th>No</th>
-                                <th>Nama Kategori</th>
+                                <th>Nama User</th>
+                                <th>Email</th>
                                 <th>Aksi</th>
                             </tr>
                         </thead>
@@ -33,14 +33,15 @@
                             @php
                                 $no = 1;
                             @endphp
-                            @foreach ($kategori as $row)
+                            @foreach ($user as $row)
                                 <tr>
                                     <td>{{ $no++ }}</td>
-                                    <td>{{ $row->nama_kategori }}</td>
+                                    <td>{{ $row->name }}</td>
+                                    <td>{{ $row->email }}</td>
                                     <td>
-                                        <a href="{{ route('kategori.ubah', $row->id_kategori) }}"
+                                        <a href="{{ route('user.ubah', $row->id) }}"
                                             class="btn btn-sm btn-secondary"><i class="fas fa-edit"></i> Ubah</a>
-                                        <a href="{{ route('kategori.hapus', $row->id_kategori) }}"
+                                        <a href="{{ route('user.hapus', $row->id) }}"
                                             onclick="return confirm('Anda Yakin?')" class="btn btn-sm btn-secondary"><i
                                                 class="fas fa-trash"></i> Hapus</a>
                                     </td>
